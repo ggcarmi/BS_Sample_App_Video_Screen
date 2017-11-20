@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *playButton;
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (nonatomic, strong) AVPlayer *videoPlayer;
+- (IBAction)uploadButtonClicked:(id)sender;
 
 @end
 
@@ -62,6 +63,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)uploadButtonClicked:(id)sender {
+    NSLog(@"Upload button was clicked");
+
 }
 
 @end

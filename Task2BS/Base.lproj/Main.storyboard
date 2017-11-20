@@ -61,22 +61,6 @@
                                     <constraint firstItem="zyf-O8-OxA" firstAttribute="centerY" secondItem="Nni-Ph-07M" secondAttribute="centerY" id="wti-9P-O5E"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PpU-P1-Bkc">
-                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upload_btn" translatesAutoresizingMaskIntoConstraints="NO" id="W9e-hI-fQc">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="W9e-hI-fQc" firstAttribute="leading" secondItem="PpU-P1-Bkc" secondAttribute="leading" id="4ug-3X-5oI"/>
-                                    <constraint firstAttribute="trailing" secondItem="W9e-hI-fQc" secondAttribute="trailing" id="eX5-g8-Hak"/>
-                                    <constraint firstAttribute="height" constant="56" id="jCW-az-fYE"/>
-                                    <constraint firstItem="W9e-hI-fQc" firstAttribute="top" secondItem="PpU-P1-Bkc" secondAttribute="top" id="rVQ-N6-zV7"/>
-                                    <constraint firstAttribute="bottom" secondItem="W9e-hI-fQc" secondAttribute="bottom" id="zTZ-bH-jAY"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP1-Uj-dna">
                                 <rect key="frame" x="0.0" y="56" width="375" height="277.5"/>
                                 <subviews>
@@ -143,6 +127,26 @@
                                     <constraint firstItem="9IK-Dy-6zC" firstAttribute="top" secondItem="f8X-uZ-tlf" secondAttribute="top" constant="85.5" id="ocp-6z-sQN"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PpU-P1-Bkc">
+                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upload_btn" translatesAutoresizingMaskIntoConstraints="NO" id="W9e-hI-fQc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="YWd-Nn-6VH" appends="YES" id="K4g-MT-MEd"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="W9e-hI-fQc" firstAttribute="leading" secondItem="PpU-P1-Bkc" secondAttribute="leading" id="4ug-3X-5oI"/>
+                                    <constraint firstAttribute="trailing" secondItem="W9e-hI-fQc" secondAttribute="trailing" id="eX5-g8-Hak"/>
+                                    <constraint firstAttribute="height" constant="56" id="jCW-az-fYE"/>
+                                    <constraint firstItem="W9e-hI-fQc" firstAttribute="top" secondItem="PpU-P1-Bkc" secondAttribute="top" id="rVQ-N6-zV7"/>
+                                    <constraint firstAttribute="bottom" secondItem="W9e-hI-fQc" secondAttribute="bottom" id="zTZ-bH-jAY"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -169,6 +173,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="YWd-Nn-6VH">
+                    <connections>
+                        <action selector="uploadButtonClicked:" destination="BYZ-38-t0r" id="dVW-Hm-Ydx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
