@@ -32,6 +32,7 @@
     [_playButton addGestureRecognizer:singleTap];
     
     // handle video
+    //create url
     NSURL *videoURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"sampleVideo" ofType:@"mp4"]];
     
     AVPlayerItem *item = [AVPlayerItem playerItemWithURL:videoURL];
@@ -62,42 +63,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//// for video
--(UIView *) createHeaderView {
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectZero];
-    contentView.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:contentView
-                                                          attribute:NSLayoutAttributeWidth
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeWidth
-                                                         multiplier:1.0
-                                                           constant:0]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:contentView
-                                                          attribute:NSLayoutAttributeHeight
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:nil
-                                                          attribute:NSLayoutAttributeNotAnAttribute
-                                                         multiplier:1.0
-                                                           constant:60]];
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-    label.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    return contentView;
-}
-
--(void)playerDidFinishPlaying:(NSNotification *)notification {
-    NSLog(@"playerDidFinishPlaying");
-}
-
-//- (IBAction)playVideoButtonPressed:(id)sender {
-//    self.playButton.hidden = YES;
-//    [self.videoPlayer play];
-//}
-
 
 @end
