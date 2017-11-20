@@ -102,7 +102,7 @@
                     </view>
                     <connections>
                         <outlet property="playButton" destination="33U-P1-OEc" id="M9Q-22-Ldq"/>
-                        <outlet property="videoView" destination="cP1-Uj-dna" id="Xme-Ny-LjH"/>
+                        <outlet property="playerView" destination="cP1-Uj-dna" id="pHQ-4b-m2P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

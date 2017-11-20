@@ -13,7 +13,7 @@
 		466E7AA41FC2F905006DD931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 466E7AA31FC2F905006DD931 /* Assets.xcassets */; };
 		466E7AA71FC2F905006DD931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 466E7AA51FC2F905006DD931 /* LaunchScreen.storyboard */; };
 		466E7AAA1FC2F905006DD931 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 466E7AA91FC2F905006DD931 /* main.m */; };
-		466E7AB21FC30790006DD931 /* BRVideoPreviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 466E7AB11FC30790006DD931 /* BRVideoPreviewVC.m */; };
+		466E7AB41FC31A56006DD931 /* sampleVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 466E7AB31FC307AE006DD931 /* sampleVideo.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,6 @@
 		466E7AA61FC2F905006DD931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		466E7AA81FC2F905006DD931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		466E7AA91FC2F905006DD931 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		466E7AB01FC30790006DD931 /* BRVideoPreviewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRVideoPreviewVC.h; sourceTree = "<group>"; };
-		466E7AB11FC30790006DD931 /* BRVideoPreviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRVideoPreviewVC.m; sourceTree = "<group>"; };
 		466E7AB31FC307AE006DD931 /* sampleVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sampleVideo.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,8 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				466E7AB31FC307AE006DD931 /* sampleVideo.mp4 */,
-				466E7AB01FC30790006DD931 /* BRVideoPreviewVC.h */,
-				466E7AB11FC30790006DD931 /* BRVideoPreviewVC.m */,
 				466E7A9A1FC2F905006DD931 /* AppDelegate.h */,
 				466E7A9B1FC2F905006DD931 /* AppDelegate.m */,
 				466E7A9D1FC2F905006DD931 /* ViewController.h */,
@@ -139,6 +135,7 @@
 				466E7AA71FC2F905006DD931 /* LaunchScreen.storyboard in Resources */,
 				466E7AA41FC2F905006DD931 /* Assets.xcassets in Resources */,
 				466E7AA21FC2F905006DD931 /* Main.storyboard in Resources */,
+				466E7AB41FC31A56006DD931 /* sampleVideo.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +149,6 @@
 				466E7A9F1FC2F905006DD931 /* ViewController.m in Sources */,
 				466E7AAA1FC2F905006DD931 /* main.m in Sources */,
 				466E7A9C1FC2F905006DD931 /* AppDelegate.m in Sources */,
-				466E7AB21FC30790006DD931 /* BRVideoPreviewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
