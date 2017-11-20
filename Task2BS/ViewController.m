@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *playButton;
+@property (weak, nonatomic) IBOutlet UIView *videoView;
 
 @end
 
@@ -17,8 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // make the image (play button) clickable
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
+    singleTap.numberOfTapsRequired = 1;
+    [_playButton setUserInteractionEnabled:YES];
+    [_playButton addGestureRecognizer:singleTap];
+    
 }
 
+-(void)tapDetected{
+    NSLog(@"single Tap on imageview");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
