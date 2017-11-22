@@ -11,7 +11,9 @@
 #import <AVKit/AVKit.h>
 #import <CoreMedia/CoreMedia.h>
 
-@interface ViewController ()
+#import "UIFloatLabelTextField.h"
+
+@interface ViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *playButton;
 @property (weak, nonatomic) IBOutlet UIView *playerView;
@@ -52,6 +54,15 @@
     
 //    // end - handle video
     
+    // setup text fields
+    UIFloatLabelTextField *firstNameTextField = [UIFloatLabelTextField new];
+    [firstNameTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
+    firstNameTextField.floatLabelActiveColor = [UIColor orangeColor]; // enter your color
+    firstNameTextField.placeholder = @"First Name"; // placeholder text
+    firstNameTextField.text = @"Gai"; // d text
+    firstNameTextField.delegate = self;
+    [self.view addSubview:firstNameTextField];
+    
 }
 
 -(void)tapDetected{
@@ -65,9 +76,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)playerDidFinishPlaying:(NSNotification *)notification {
+    NSLog(@"playerDidFinishPlaying");
+    self.playButton.hidden = NO;
+
+    //AVPlayerItemDidPlayToEndTimeNotification
+
+}
+
+
 - (IBAction)uploadButtonClicked:(id)sender {
     NSLog(@"Upload button was clicked");
+    self.playButton.hidden = YES;
+    [self.videoPlayer play];
+}
 
+// for text fields
+#pragma mark - UIResponder
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    if(![touch.view isMemberOfClass:[UITextField class]]) {
+        [touch.view endEditing:YES];
+    }
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4613672F1FC5F31100E91C6C /* UIFloatLabelTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4613672E1FC5F31100E91C6C /* UIFloatLabelTextField.m */; };
 		466E7A9C1FC2F905006DD931 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 466E7A9B1FC2F905006DD931 /* AppDelegate.m */; };
 		466E7A9F1FC2F905006DD931 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466E7A9E1FC2F905006DD931 /* ViewController.m */; };
 		466E7AA21FC2F905006DD931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 466E7AA01FC2F905006DD931 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4613672D1FC5F31100E91C6C /* UIFloatLabelTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIFloatLabelTextField.h; sourceTree = "<group>"; };
+		4613672E1FC5F31100E91C6C /* UIFloatLabelTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIFloatLabelTextField.m; sourceTree = "<group>"; };
 		466E7A971FC2F905006DD931 /* Task2BS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task2BS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		466E7A9A1FC2F905006DD931 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		466E7A9B1FC2F905006DD931 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,6 +68,8 @@
 				466E7A9B1FC2F905006DD931 /* AppDelegate.m */,
 				466E7A9D1FC2F905006DD931 /* ViewController.h */,
 				466E7A9E1FC2F905006DD931 /* ViewController.m */,
+				4613672D1FC5F31100E91C6C /* UIFloatLabelTextField.h */,
+				4613672E1FC5F31100E91C6C /* UIFloatLabelTextField.m */,
 				466E7AA01FC2F905006DD931 /* Main.storyboard */,
 				466E7AA31FC2F905006DD931 /* Assets.xcassets */,
 				466E7AA51FC2F905006DD931 /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 				466E7A9F1FC2F905006DD931 /* ViewController.m in Sources */,
 				466E7AAA1FC2F905006DD931 /* main.m in Sources */,
 				466E7A9C1FC2F905006DD931 /* AppDelegate.m in Sources */,
+				4613672F1FC5F31100E91C6C /* UIFloatLabelTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
