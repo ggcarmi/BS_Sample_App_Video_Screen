@@ -11,7 +11,7 @@
 #import <AVKit/AVKit.h>
 #import <CoreMedia/CoreMedia.h>
 
-#import "UIFloatLabelTextField.h"
+
 
 @interface ViewController () <UITextFieldDelegate>
 
@@ -19,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (nonatomic, strong) AVPlayer *videoPlayer;
 - (IBAction)uploadButtonClicked:(id)sender;
-@property (weak, nonatomic) IBOutlet UIView *customTextFieldViewHolder;
 
 @end
 
@@ -55,36 +54,7 @@
     
 //    // end - handle video
     
-    // setup text fields
-//    UIFloatLabelTextField *firstNameTextField = [UIFloatLabelTextField new];
-//    [firstNameTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    firstNameTextField.floatLabelActiveColor = [UIColor orangeColor]; // enter your color
-//    firstNameTextField.placeholder = @"First Name"; // placeholder text
-//    firstNameTextField.text = @"Gai"; // d text
-//    firstNameTextField.delegate = self;
-//    [self.view addSubview:firstNameTextField];
-    
-    UIFloatLabelTextField *firstNameTextField = [UIFloatLabelTextField new];
-    [firstNameTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
-    firstNameTextField.floatLabelActiveColor = [UIColor orangeColor]; // enter your color
-    firstNameTextField.placeholder = @"First Name"; // placeholder text
-    firstNameTextField.text = @"Gai"; // default text
-    firstNameTextField.delegate = self;
-    [self.customTextFieldViewHolder addSubview:firstNameTextField];
-    
-    // Horizontal
-    [self.customTextFieldViewHolder addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[firstNameTextField]-10-|"
-                                                                      options:NSLayoutFormatAlignAllBaseline
-                                                                      metrics:nil
-                                                                        views:NSDictionaryOfVariableBindings(firstNameTextField)]];
 
-
-
-    // Vertical
-    [self.customTextFieldViewHolder addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[firstNameTextField(44)]-0-|"
-                                                                      options:0
-                                                                      metrics:nil
-                                                                        views:NSDictionaryOfVariableBindings(firstNameTextField)]];
 }
     
 
@@ -104,6 +74,7 @@
 -(void)playerDidFinishPlaying:(NSNotification *)notification {
     NSLog(@"playerDidFinishPlaying");
     self.playButton.hidden = NO;
+    [self.videoPlayer seekToTime:kCMTimeZero];
 
     //AVPlayerItemDidPlayToEndTimeNotification
 
