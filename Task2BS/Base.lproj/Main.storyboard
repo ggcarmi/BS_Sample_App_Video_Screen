@@ -23,15 +23,47 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjz-n9-OG1" userLabel="titleView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YhH-ES-5Tj">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YhH-ES-5Tj">
                                                 <rect key="frame" x="263" y="0.0" width="112" height="56"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-wP-3Hc">
+                                                        <rect key="frame" x="0.0" y="18.5" width="52.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AXn-Zm-3vs">
+                                                        <rect key="frame" x="74" y="18" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="Wg9-Je-GZs"/>
+                                                            <constraint firstAttribute="height" constant="20" id="Wga-UE-oaH"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.99385291337966919" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="AXn-Zm-3vs" firstAttribute="centerY" secondItem="YhH-ES-5Tj" secondAttribute="centerY" id="AxK-pl-hQA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AXn-Zm-3vs" secondAttribute="trailing" constant="18" id="icm-J0-VW7"/>
+                                                    <constraint firstItem="RmL-wP-3Hc" firstAttribute="centerY" secondItem="YhH-ES-5Tj" secondAttribute="centerY" id="sg4-te-qZE"/>
+                                                    <constraint firstItem="RmL-wP-3Hc" firstAttribute="leading" secondItem="YhH-ES-5Tj" secondAttribute="leading" id="wK9-Eg-sHP"/>
+                                                </constraints>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-U0-zAs">
+                                                <rect key="frame" x="24" y="18.5" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="YhH-ES-5Tj" firstAttribute="top" secondItem="Xjz-n9-OG1" secondAttribute="top" id="ANy-td-Dor"/>
+                                            <constraint firstItem="Rdf-U0-zAs" firstAttribute="leading" secondItem="Xjz-n9-OG1" secondAttribute="leading" constant="24" id="II1-7o-h7C"/>
+                                            <constraint firstAttribute="trailing" secondItem="YhH-ES-5Tj" secondAttribute="trailing" id="RHQ-ed-gi4"/>
+                                            <constraint firstAttribute="bottom" secondItem="YhH-ES-5Tj" secondAttribute="bottom" id="Z6p-SP-wee"/>
                                             <constraint firstAttribute="height" constant="56" id="hod-nT-Iw6"/>
+                                            <constraint firstItem="Rdf-U0-zAs" firstAttribute="centerY" secondItem="Xjz-n9-OG1" secondAttribute="centerY" id="jHg-TO-Igu"/>
+                                            <constraint firstItem="YhH-ES-5Tj" firstAttribute="leading" secondItem="Rdf-U0-zAs" secondAttribute="trailing" constant="197" id="yAh-5j-5Lv"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP1-Uj-dna">
