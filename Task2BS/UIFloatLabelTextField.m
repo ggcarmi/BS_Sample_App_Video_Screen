@@ -129,10 +129,23 @@
     _floatLabel.alpha = 0.0f;
     [_floatLabel setCenter:CGPointMake(_xOrigin, 0.0f)];
     [self addSubview:_floatLabel];
-    
+
     // colors
     _floatLabelPassiveColor = [UIColor lightGrayColor];
     _floatLabelActiveColor = [UIColor blueColor];
+    
+    
+////    // im trying to play with this
+//    _floatLabel = [UILabel new];
+//    _floatLabel.textColor = [UIColor yellowColor];
+//    _floatLabel.font =[UIFont boldSystemFontOfSize:12.0f];
+//    _floatLabel.alpha = 0.0f;
+//    [_floatLabel setCenter:CGPointMake(_xOrigin, 0.0f)];
+//    [self addSubview:_floatLabel];
+//
+//    // colors
+//    _floatLabelPassiveColor = [UIColor purpleColor];
+//    _floatLabelActiveColor = [UIColor redColor];
     
     // animationDuration
     _floatLabelShowAnimationDuration = @0.25f;

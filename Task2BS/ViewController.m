@@ -10,7 +10,7 @@
 #import "BRVideoPreviewVC.h"
 #import <AVKit/AVKit.h>
 #import <CoreMedia/CoreMedia.h>
-
+#import "UIFloatLabelTextField.h"
 
 
 @interface ViewController () <UITextFieldDelegate>
@@ -19,6 +19,10 @@
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (nonatomic, strong) AVPlayer *videoPlayer;
 - (IBAction)uploadButtonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *userDetailContainerView;
+
+-(void)createTextField;
+
 
 @end
 
@@ -54,6 +58,7 @@
     
 //    // end - handle video
     
+    [self createTextField];
 
 }
     
@@ -95,6 +100,74 @@
     if(![touch.view isMemberOfClass:[UITextField class]]) {
         [touch.view endEditing:YES];
     }
+}
+
+-(void)createTextField {
+    
+    // setup text fields
+
+    //general
+//        UIColor *grayColorBS = [UIColor colorWithRed:(15) green:(20) blue:(24) alpha:(1)];
+    UIColor *grayColorBS = [UIColor blueColor];
+
+    //    self.userDetailContainerView.backgroundColor = [UIColor grayColor];
+    //    self.title = @"UIFloatLabelTextField Example";
+    [[UIFloatLabelTextField appearance] setBackgroundColor:[UIColor grayColor]] ;
+//    [[UIFloatLabelTextField appearance] setBackgroundColor:self.userDetailContainerView.backgroundColor] ;
+
+    
+    // main text
+    [[UIFloatLabelTextField appearance] setFont:[UIFont fontWithName:@"Helvetica" size:22]];
+    [[UIFloatLabelTextField appearance] setTextColor:[UIColor whiteColor]]; // the text color
+    
+    // floating text
+    [[UIFloatLabelTextField appearance] setFloatLabelFont:[UIFont fontWithName:@"Helvetica" size:16]];
+    
+    [[UIFloatLabelTextField appearance] setFloatLabelPassiveColor:grayColorBS];
+    [[UIFloatLabelTextField appearance] setFloatLabelActiveColor:grayColorBS];
+    
+    UIFloatLabelTextField *firstNameTextField = [UIFloatLabelTextField new];
+//    [firstNameTextField setFont:[UIFont fontWithName:@"Helvetica" size:20]];
+
+    
+    [firstNameTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    firstNameTextField.floatLabelActiveColor = [UIColor orangeColor]; // the placeholder color after
+    firstNameTextField.placeholder = @"First Name"; // placeholder text
+    firstNameTextField.text = @""; // default text
+    firstNameTextField.delegate = self;
+//    firstNameTextField.dismissKeyboardWhenClearingTextField = @YES;
+//    firstNameTextField.clearButtonMode = UITextFieldViewModeNever;
+    
+    [self.userDetailContainerView addSubview:firstNameTextField];
+    
+    UIFloatLabelTextField *cityTextField = [UIFloatLabelTextField new];
+//    [cityTextField setFont:[UIFont fontWithName:@"Helvetica" size:20]];
+
+    [cityTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    cityTextField.floatLabelActiveColor = [UIColor orangeColor]; // enter your color
+    cityTextField.placeholder = @"City"; // placeholder text
+    cityTextField.text = @""; // default text
+    cityTextField.delegate = self;
+    [self.userDetailContainerView addSubview:cityTextField];
+    
+    // Horizontal
+    [self.userDetailContainerView addConstraints:[NSLayoutConstraint
+          constraintsWithVisualFormat:@"H:|-10-[firstNameTextField]-10-|"
+          options:NSLayoutFormatAlignAllBaseline metrics:nil
+          views:NSDictionaryOfVariableBindings(firstNameTextField)]];
+
+    [self.userDetailContainerView addConstraints:[NSLayoutConstraint
+          constraintsWithVisualFormat:@"H:|-10-[cityTextField]-10-|"
+          options:NSLayoutFormatAlignAllBaseline metrics:nil
+          views:NSDictionaryOfVariableBindings(cityTextField)]];
+
+    
+    
+    // Vertical
+    [self.userDetailContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[firstNameTextField(44)]-80-[cityTextField(44)]"
+                                                                                           options:0
+                                                                                           metrics:nil
+                                                                                             views:NSDictionaryOfVariableBindings(firstNameTextField, cityTextField)]];
 }
 
 @end
