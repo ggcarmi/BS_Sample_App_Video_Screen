@@ -15,6 +15,7 @@
 		466E7AA71FC2F905006DD931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 466E7AA51FC2F905006DD931 /* LaunchScreen.storyboard */; };
 		466E7AAA1FC2F905006DD931 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 466E7AA91FC2F905006DD931 /* main.m */; };
 		466E7AB41FC31A56006DD931 /* sampleVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 466E7AB31FC307AE006DD931 /* sampleVideo.mp4 */; };
+		E68A8FEF1FC951FF008318EB /* ExperimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E68A8FEE1FC951FF008318EB /* ExperimentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		466E7AA81FC2F905006DD931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		466E7AA91FC2F905006DD931 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		466E7AB31FC307AE006DD931 /* sampleVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sampleVideo.mp4; sourceTree = "<group>"; };
+		E68A8FED1FC951FF008318EB /* ExperimentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExperimentViewController.h; sourceTree = "<group>"; };
+		E68A8FEE1FC951FF008318EB /* ExperimentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExperimentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				466E7A9B1FC2F905006DD931 /* AppDelegate.m */,
 				466E7A9D1FC2F905006DD931 /* ViewController.h */,
 				466E7A9E1FC2F905006DD931 /* ViewController.m */,
+				E68A8FED1FC951FF008318EB /* ExperimentViewController.h */,
+				E68A8FEE1FC951FF008318EB /* ExperimentViewController.m */,
 				4613672D1FC5F31100E91C6C /* UIFloatLabelTextField.h */,
 				4613672E1FC5F31100E91C6C /* UIFloatLabelTextField.m */,
 				466E7AA01FC2F905006DD931 /* Main.storyboard */,
@@ -151,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68A8FEF1FC951FF008318EB /* ExperimentViewController.m in Sources */,
 				466E7A9F1FC2F905006DD931 /* ViewController.m in Sources */,
 				466E7AAA1FC2F905006DD931 /* main.m in Sources */,
 				466E7A9C1FC2F905006DD931 /* AppDelegate.m in Sources */,
