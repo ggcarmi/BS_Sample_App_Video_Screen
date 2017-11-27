@@ -24,16 +24,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YhH-ES-5Tj" userLabel="retakeContainerView">
-                                                <rect key="frame" x="263" y="0.0" width="112" height="56"/>
+                                                <rect key="frame" x="374.5" y="0.0" width="0.5" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-wP-3Hc">
-                                                        <rect key="frame" x="1.5" y="18.5" width="52.5" height="20.5"/>
+                                                        <rect key="frame" x="-110" y="18.5" width="52.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retake_btn_2" translatesAutoresizingMaskIntoConstraints="NO" id="AXn-Zm-3vs">
-                                                        <rect key="frame" x="74" y="18" width="20" height="20"/>
+                                                        <rect key="frame" x="-37.5" y="18" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="Wg9-Je-GZs"/>
                                                             <constraint firstAttribute="height" constant="20" id="Wga-UE-oaH"/>
@@ -52,10 +52,10 @@
                                                     <outletCollection property="gestureRecognizers" destination="LRE-ir-tmZ" appends="YES" id="Mf4-qN-J0X"/>
                                                 </connections>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-U0-zAs">
-                                                <rect key="frame" x="24" y="18.5" width="42" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your video is ready" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-U0-zAs">
+                                                <rect key="frame" x="24" y="18" width="153.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.9879181981086731" green="0.99617189168930054" blue="0.99605172872543335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -115,6 +115,7 @@
                                 <constraints>
                                     <constraint firstItem="PpU-P1-Bkc" firstAttribute="leading" secondItem="WcH-2I-uQ2" secondAttribute="leading" id="FyG-2j-tdZ"/>
                                     <constraint firstItem="f8X-uZ-tlf" firstAttribute="height" secondItem="cP1-Uj-dna" secondAttribute="height" id="Ir2-Yh-SU4"/>
+                                    <constraint firstItem="cP1-Uj-dna" firstAttribute="width" secondItem="WcH-2I-uQ2" secondAttribute="width" id="Rqx-eq-KWF"/>
                                     <constraint firstAttribute="trailing" secondItem="PpU-P1-Bkc" secondAttribute="trailing" id="eDt-5U-QVj"/>
                                 </constraints>
                             </stackView>

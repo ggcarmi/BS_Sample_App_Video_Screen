@@ -148,14 +148,9 @@
     // setup text fields
 
     //general
-//        UIColor *grayColorBS = [UIColor colorWithRed:(15) green:(20) blue:(24) alpha:(1)];
+//  UIColor *grayColorBS = [UIColor colorWithRed:(15) green:(20) blue:(24) alpha:(1)];
     UIColor *grayColorBS = [UIColor blueColor];
-
-    //    self.userDetailContainerView.backgroundColor = [UIColor grayColor];
-    //    self.title = @"UIFloatLabelTextField Example";
     [[UIFloatLabelTextField appearance] setBackgroundColor:[UIColor grayColor]] ;
-//    [[UIFloatLabelTextField appearance] setBackgroundColor:self.userDetailContainerView.backgroundColor] ;
-
     
     // main text
     [[UIFloatLabelTextField appearance] setFont:[UIFont fontWithName:@"Helvetica" size:22]];
@@ -168,27 +163,24 @@
     [[UIFloatLabelTextField appearance] setFloatLabelActiveColor:grayColorBS];
     
     _nameTextField = [UIFloatLabelTextField new];
-//    [firstNameTextField setFont:[UIFont fontWithName:@"Helvetica" size:20]];
-
-    
     [_nameTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    firstNameTextField.floatLabelActiveColor = [UIColor orangeColor]; // the placeholder color after
     _nameTextField.placeholder = @"First Name"; // placeholder text
     _nameTextField.text = @""; // default text
     _nameTextField.delegate = self;
+    _nameTextField.dismissKeyboardWhenClearingTextField = @YES;
+
+//    [firstNameTextField setFont:[UIFont fontWithName:@"Helvetica" size:20]];
+//    firstNameTextField.floatLabelActiveColor = [UIColor orangeColor]; // the placeholder color after
 //    firstNameTextField.dismissKeyboardWhenClearingTextField = @YES;
 //    firstNameTextField.clearButtonMode = UITextFieldViewModeNever;
-    
     [self.userDetailContainerView addSubview:_nameTextField];
     
     _cityTextField = [UIFloatLabelTextField new];
-//    [cityTextField setFont:[UIFont fontWithName:@"Helvetica" size:20]];
-
     [_cityTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    cityTextField.floatLabelActiveColor = [UIColor orangeColor]; // enter your color
     _cityTextField.placeholder = @"City"; // placeholder text
     _cityTextField.text = @""; // default text
     _cityTextField.delegate = self;
+    _cityTextField.dismissKeyboardWhenClearingTextField = @YES;
     [self.userDetailContainerView addSubview:_cityTextField];
     
     // Horizontal
@@ -202,13 +194,10 @@
           options:NSLayoutFormatAlignAllBaseline metrics:nil
           views:NSDictionaryOfVariableBindings(_cityTextField)]];
 
-    
-    
     // Vertical
     [self.userDetailContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[_nameTextField(44)]-80-[_cityTextField(44)]"
-                                                                                           options:0
-                                                                                           metrics:nil
-                                                                                             views:NSDictionaryOfVariableBindings(_nameTextField, _cityTextField)]];
+        options:0 metrics:nil
+        views:NSDictionaryOfVariableBindings(_nameTextField, _cityTextField)]];
 }
 
 @end
