@@ -23,16 +23,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjz-n9-OG1" userLabel="titleView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YhH-ES-5Tj">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YhH-ES-5Tj" userLabel="retakeContainerView">
                                                 <rect key="frame" x="263" y="0.0" width="112" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-wP-3Hc">
-                                                        <rect key="frame" x="0.0" y="18.5" width="52.5" height="20.5"/>
+                                                        <rect key="frame" x="1.5" y="18.5" width="52.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AXn-Zm-3vs">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retake_btn_2" translatesAutoresizingMaskIntoConstraints="NO" id="AXn-Zm-3vs">
                                                         <rect key="frame" x="74" y="18" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="Wg9-Je-GZs"/>
@@ -41,12 +41,16 @@
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.99385291337966919" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="AXn-Zm-3vs" firstAttribute="centerY" secondItem="YhH-ES-5Tj" secondAttribute="centerY" id="AxK-pl-hQA"/>
+                                                    <constraint firstItem="AXn-Zm-3vs" firstAttribute="leading" secondItem="RmL-wP-3Hc" secondAttribute="trailing" constant="20" id="KeD-vP-RJ8"/>
                                                     <constraint firstAttribute="trailing" secondItem="AXn-Zm-3vs" secondAttribute="trailing" constant="18" id="icm-J0-VW7"/>
                                                     <constraint firstItem="RmL-wP-3Hc" firstAttribute="centerY" secondItem="YhH-ES-5Tj" secondAttribute="centerY" id="sg4-te-qZE"/>
-                                                    <constraint firstItem="RmL-wP-3Hc" firstAttribute="leading" secondItem="YhH-ES-5Tj" secondAttribute="leading" id="wK9-Eg-sHP"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="LRE-ir-tmZ" appends="YES" id="Mf4-qN-J0X"/>
+                                                </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-U0-zAs">
                                                 <rect key="frame" x="24" y="18.5" width="42" height="20.5"/>
@@ -137,6 +141,11 @@
                         <action selector="uploadButtonClicked:" destination="BYZ-38-t0r" id="dVW-Hm-Ydx"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="LRE-ir-tmZ">
+                    <connections>
+                        <action selector="retakeVideo:" destination="BYZ-38-t0r" id="D7Z-q7-4oJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
@@ -160,6 +169,7 @@
     </scenes>
     <resources>
         <image name="play_btn" width="101" height="61"/>
+        <image name="retake_btn_2" width="42" height="42"/>
         <image name="upload_btn" width="480" height="74"/>
     </resources>
 </document>

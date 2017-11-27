@@ -18,10 +18,17 @@
 @property (weak, nonatomic) IBOutlet UIImageView *playButton;
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (nonatomic, strong) AVPlayer *videoPlayer;
-- (IBAction)uploadButtonClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *userDetailContainerView;
 
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *city;
+@property (strong, nonatomic)UIFloatLabelTextField *nameTextField;
+@property (strong, nonatomic)UIFloatLabelTextField *cityTextField;
+
+- (IBAction)retakeVideo:(id)sender;
 -(void)createTextField;
+- (IBAction)uploadButtonClicked:(id)sender;
+
 
 
 @end
@@ -88,18 +95,30 @@
 
 - (IBAction)uploadButtonClicked:(id)sender {
     NSLog(@"Upload button was clicked");
-    self.playButton.hidden = YES;
-    [self.videoPlayer play];
+    
+    // add check for currect value
+    NSLog(@"The name is: %@ and the city is: %@", _name, _city);
+
+//    self.playButton.hidden = YES;
+//    [self.videoPlayer play];
 }
 
 // for text fields
 #pragma mark - UIResponder
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    _name = _nameTextField.text;
+    _city = _cityTextField.text;
+
     UITouch *touch = [touches anyObject];
     if(![touch.view isMemberOfClass:[UITextField class]]) {
         [touch.view endEditing:YES];
     }
+}
+
+- (IBAction)retakeVideo:(id)sender {
+    NSLog(@"retake video button was clicked");
+
 }
 
 -(void)createTextField {
@@ -126,48 +145,48 @@
     [[UIFloatLabelTextField appearance] setFloatLabelPassiveColor:grayColorBS];
     [[UIFloatLabelTextField appearance] setFloatLabelActiveColor:grayColorBS];
     
-    UIFloatLabelTextField *firstNameTextField = [UIFloatLabelTextField new];
+    _nameTextField = [UIFloatLabelTextField new];
 //    [firstNameTextField setFont:[UIFont fontWithName:@"Helvetica" size:20]];
 
     
-    [firstNameTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [_nameTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
 //    firstNameTextField.floatLabelActiveColor = [UIColor orangeColor]; // the placeholder color after
-    firstNameTextField.placeholder = @"First Name"; // placeholder text
-    firstNameTextField.text = @""; // default text
-    firstNameTextField.delegate = self;
+    _nameTextField.placeholder = @"First Name"; // placeholder text
+    _nameTextField.text = @""; // default text
+    _nameTextField.delegate = self;
 //    firstNameTextField.dismissKeyboardWhenClearingTextField = @YES;
 //    firstNameTextField.clearButtonMode = UITextFieldViewModeNever;
     
-    [self.userDetailContainerView addSubview:firstNameTextField];
+    [self.userDetailContainerView addSubview:_nameTextField];
     
-    UIFloatLabelTextField *cityTextField = [UIFloatLabelTextField new];
+    _cityTextField = [UIFloatLabelTextField new];
 //    [cityTextField setFont:[UIFont fontWithName:@"Helvetica" size:20]];
 
-    [cityTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [_cityTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
 //    cityTextField.floatLabelActiveColor = [UIColor orangeColor]; // enter your color
-    cityTextField.placeholder = @"City"; // placeholder text
-    cityTextField.text = @""; // default text
-    cityTextField.delegate = self;
-    [self.userDetailContainerView addSubview:cityTextField];
+    _cityTextField.placeholder = @"City"; // placeholder text
+    _cityTextField.text = @""; // default text
+    _cityTextField.delegate = self;
+    [self.userDetailContainerView addSubview:_cityTextField];
     
     // Horizontal
     [self.userDetailContainerView addConstraints:[NSLayoutConstraint
-          constraintsWithVisualFormat:@"H:|-10-[firstNameTextField]-10-|"
+          constraintsWithVisualFormat:@"H:|-10-[_nameTextField]-10-|"
           options:NSLayoutFormatAlignAllBaseline metrics:nil
-          views:NSDictionaryOfVariableBindings(firstNameTextField)]];
+          views:NSDictionaryOfVariableBindings(_nameTextField)]];
 
     [self.userDetailContainerView addConstraints:[NSLayoutConstraint
-          constraintsWithVisualFormat:@"H:|-10-[cityTextField]-10-|"
+          constraintsWithVisualFormat:@"H:|-10-[_cityTextField]-10-|"
           options:NSLayoutFormatAlignAllBaseline metrics:nil
-          views:NSDictionaryOfVariableBindings(cityTextField)]];
+          views:NSDictionaryOfVariableBindings(_cityTextField)]];
 
     
     
     // Vertical
-    [self.userDetailContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[firstNameTextField(44)]-80-[cityTextField(44)]"
+    [self.userDetailContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[_nameTextField(44)]-80-[_cityTextField(44)]"
                                                                                            options:0
                                                                                            metrics:nil
-                                                                                             views:NSDictionaryOfVariableBindings(firstNameTextField, cityTextField)]];
+                                                                                             views:NSDictionaryOfVariableBindings(_nameTextField, _cityTextField)]];
 }
 
 @end
