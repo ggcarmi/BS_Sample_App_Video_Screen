@@ -96,8 +96,30 @@
 - (IBAction)uploadButtonClicked:(id)sender {
     NSLog(@"Upload button was clicked");
     
-    // add check for currect value
-    NSLog(@"The name is: %@ and the city is: %@", _name, _city);
+    // need to take this out to utils function
+    if( !_name.length || !_city.length ){
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"error"
+                                     message:@"name and city can not be empty!"
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        //Add Buttons
+        UIAlertAction* oKButton = [UIAlertAction
+                                   actionWithTitle:@"Ok"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action) {
+                                       //Handle no, thanks button
+                                   }];
+        
+        //Add your buttons to alert controller
+        [alert addAction:oKButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    }else{
+        // print name and city
+        NSLog(@"The name is: %@ and the city is: %@", _name, _city);
+    }
 
 //    self.playButton.hidden = YES;
 //    [self.videoPlayer play];
